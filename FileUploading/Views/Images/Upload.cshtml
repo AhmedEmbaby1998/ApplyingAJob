@@ -1,0 +1,13 @@
+﻿@model FileUploading.Models.Image
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+   <form asp-controller="Images" asp-action="Create"  enctype = "multipart/form-data" method="post" >
+        <input type="file" asp-for="form" multiple="multiple"/>
+        <input type="submit"/>
+    </form>
